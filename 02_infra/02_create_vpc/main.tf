@@ -62,7 +62,7 @@ resource "aws_internet_gateway" "aws01-igw" {
 
 # EIP
 resource "aws_eip" "aws01-eip" {
-    domain      = "vpc"
+    domain     = "vpc"
     depends_on = ["aws_internet_gateway.aws01-igw"]
     lifecycle {
         create_before_destroy = true
